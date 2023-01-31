@@ -2,7 +2,17 @@
   box-sizing: border-box;
 }
 
-.pokemonCard_heart img{
-  width:3rem;
+.pokemonCardCharacter img{
+width: 8rem;
+height: 8rem;
 }
 
+.scrollButton button{
+  background-color: #E5E7EB;
+  border: none;
+  font-weight: 700;
+  padding: .6rem 1.6rem;
+  border-radius: .5rem;
+  width: 100%;
+
+}

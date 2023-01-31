@@ -1,0 +1,18 @@
+
+    <div class=" row nav  py-3">
+      <div class="col col-sm-5 col-md-7 col-lg-7 col-xl-9 col-xxl-9 ">
+        <h3 class="nav_h3">Pokemones</h3>
+      </div>
+      <div class="col-12 col-sm-7 col-md-5 col-lg-5 col-xl-3 col-xxl-3 d-flex flex-row-reverse nav_form">
+
+
+        <button (click)="SearchPokemon()"class="backgroundButton text-light" type="submit">Buscar</button>
+
+
+          <input autocomplete="off" (keyup.enter)="SearchPokemon()" class="form-control border-0" type="text" name="Search"
+          placeholder="Buscar Pokemon" [(ngModel)] = "search">
+
+
+      </div>
+    </div>
+

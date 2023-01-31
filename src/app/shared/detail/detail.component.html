@@ -1,1 +1,24 @@
-<p>detail works!</p>
+<div class="container-fluid PrincipalHome ">
+  <app-top-bar></app-top-bar>
+
+<div *ngIf="pokemon" class=" mt-5 container d-flex justify-content-center">
+  <div class="card border-0 mt-3 rounded" style="width: 18rem;">
+    <div class="image pb-3" >
+      <img [src]="pokemon.sprites.other?.dream_world?.front_default" class="card-img-top">
+    </div>
+    <div class="card-body rounded  mt-2">
+      <h5 class="card-title text-center">{{pokemon.name | titlecase}}</h5>
+      <div class="types d-flex justify-content-center py-3">
+        <span *ngFor="let type of pokemon.types"  class="typeGrey d-inline-block">{{type.type.name}}</span>
+      </div>
+      <p class="card-text">{{detail?.flavor_text_entries[26].flavor_text}}</p>
+      <span><strong>ID : </strong>0{{pokemon.id  | number : '3.0-0'}}</span><br>
+      <span><strong>Altura : </strong>{{pokemon.height}}</span><br>
+      <span><strong>Peso : </strong>{{pokemon.weight}}</span>
+      <button type="submit" (click)="addFavorites()" [routerLink]="['/favorites']"
+      class="p-2 mt-3 rounded border-0 backgroundButton text-light">AGREGAR A FAVORITOS</button>
+    </div>
+  </div>
+
+
+</div>

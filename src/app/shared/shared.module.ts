@@ -6,7 +6,9 @@ import { FavoritesComponent } from './favorites/favorites.component';
 import { DetailComponent } from './detail/detail.component';
 import { RouterModule } from '@angular/router';
 import { CardComponent } from './card/card.component';
-
+import { HttpClientModule } from '@angular/common/http';
+import { FormComponent } from './form/form.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -15,18 +17,22 @@ import { CardComponent } from './card/card.component';
     HomeComponent,
     FavoritesComponent,
     DetailComponent,
-    CardComponent
+    CardComponent,
+    FormComponent
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    HttpClientModule,
+    FormsModule
   ],
   exports:[
     TopBarComponent,
     HomeComponent,
     FavoritesComponent,
     DetailComponent,
-    CardComponent
+    CardComponent,
+    FormComponent
   ]
 })
 export class SharedModule { }

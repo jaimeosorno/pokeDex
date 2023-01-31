@@ -1,11 +1,12 @@
-<div class="row p-3">
-
+<div  class="row pt-2 my-2">
   <div class="col">
-    <a href=""><img src="../../../assets/logo.svg" ></a>
+    <a [routerLink]="['/home']"><img src="../../../assets/logo.svg" ></a>
+  </div>
+  <div class="col d-flex flex-row-reverse pb-3 heartSize">
+    <a [routerLink]="['/favorites']"><img src="../../../assets/heart-filled.svg" ></a>
+
+     <span *ngIf="pokemonsFavorites.length > 0 " class="pTopbar">{{pokemonsFavorites.length}}</span>
+    </div>
+
   </div>
 
-  <div class="col d-flex flex-row-reverse">
-    <a href=""><img src="../../../assets/heart-filled.svg"></a>
-  </div>
-
-</div>

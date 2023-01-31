@@ -1,22 +1,22 @@
 
 
-<div class="row">
+<div  class="row g-3 ">
 
-  <div class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-4">
+  <div *ngFor="let pokemon of dataPokemon" class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-4">
     <div class="card border-0  rounded">
       <div class="card-body">
-        <div class="row pokemonCard_heart d-flex flex-row-reverse pb-1">
-          <img src="../../../assets/heart.svg">
+        <div  [ngClass]="{'heartFavTrue' : pokemon.isFavorite}" class="row pokemonCard_heart d-flex flex-row-reverse pb-1">
+          <img [src]="pokemon.isFavorite ? '../../../assets/heart-filled.svg' : '../../../assets/heart.svg'" (click)="addFavorite(pokemon)">
         </div>
-        <div class="row">
-          <div class="col-12 col-sm-12 col-md-5 col-ld-5 col-xl-5">
-            <img src="../../../assets/001.png" class="img-fluid">
+        <div class="row" [routerLink]="['/detail',pokemon.id]" >
+          <div class=" pokemonCardCharacter col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+            <img [src]="pokemon.sprites.other.dream_world?.front_default" class="img-fluid">
           </div>
-          <div class="col-12 col-sm-12 col-md-7 col-ld-7 col-xl-7">
+          <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
             <div class="card-body">
-              <h5 class="card-title">001</h5>
-              <p class="card-text">Bulbasaur</p>
-
+              <h5 class="card-title">0{{pokemon.id  | number : '3.0-0'}}</h5>
+              <p class="card-text">{{pokemon.name  | titlecase}}</p>
+              <span  *ngFor = "let type of pokemon.types" class="typeGrey d-inline-block ">{{type.type.name}}</span>
             </div>
           </div>
         </div>
@@ -24,5 +24,11 @@
     </div>
   </div>
 
-</div>
 
+  <div class="row justify-content-center scrollButton">
+    <div class="col-11 col-sm-4 col-md-3 col-lg-2 col-xl-2 col-xxl-2 my-5">
+      <button (click)="getPage()" >VER MÁS</button>
+    </div>
+  </div>
+
+</div>
