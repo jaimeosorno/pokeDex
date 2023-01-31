@@ -1,0 +1,8 @@
+.pokemonCard{
+  box-sizing: border-box;
+}
+
+.pokemonCard_heart img{
+  width:3rem;
+}
+

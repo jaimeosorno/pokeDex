@@ -5,6 +5,7 @@ import { HomeComponent } from './home/home.component';
 import { FavoritesComponent } from './favorites/favorites.component';
 import { DetailComponent } from './detail/detail.component';
 import { RouterModule } from '@angular/router';
+import { CardComponent } from './card/card.component';
 
 
 
@@ -13,7 +14,8 @@ import { RouterModule } from '@angular/router';
     TopBarComponent,
     HomeComponent,
     FavoritesComponent,
-    DetailComponent
+    DetailComponent,
+    CardComponent
   ],
   imports: [
     CommonModule,
@@ -23,7 +25,8 @@ import { RouterModule } from '@angular/router';
     TopBarComponent,
     HomeComponent,
     FavoritesComponent,
-    DetailComponent
+    DetailComponent,
+    CardComponent
   ]
 })
 export class SharedModule { }

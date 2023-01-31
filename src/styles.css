@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+
+body{
+  margin:0 ;
+  padding: 0;
+
+}
+
+.typeGrey{
+  background-color: #E5E7EB;
+  font-weight: 700;
+  padding: .4rem .6rem;
+  border-radius: .3rem;
+  margin-left: .3rem;
+}
+
+.PrincipalHome{
+  background-color: #F3F4F6;
+  height: 100vh;
+}
+
+.backgroundButton{
+ background-color: #EF4444;
+}
