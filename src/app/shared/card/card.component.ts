@@ -8,9 +8,9 @@ import { character } from '../interface/poke.interface';
   styleUrls: ['./card.component.css']
 })
 export class CardComponent {
- _limit :number = 12;
- _offset :number = 0;
- _page :number = 0;
+  _limit :number = 12;
+  _offset :number = 0;
+  _page :number = 0;
 
   dataPokemon:any[] = [];
   arrPokemonFavorites: any = [];
@@ -39,7 +39,7 @@ export class CardComponent {
         }
 
         this.dataPokemon.push(uniqResponse)
-        // console.log(this.dataPokemon)
+
 
       })
      })
@@ -47,16 +47,12 @@ export class CardComponent {
   }
 
 
-//Crear una funcion que simule la paginacion
+
   getPage(){
-    console.log("Limit: ", this._limit, " X ", this._page, "=", this._limit * this._page)
-  //Multiplicamos las variables _limit y _page para crear el offset
     this._offset = this._limit * this._page
-    //Y luego aumentamos en 1 la pagina
     this._page ++
 
-    this.getPokemons()
-    console.log("this.offset ====> ", this._offset)
+    this.getPokemons();
   }
 
 

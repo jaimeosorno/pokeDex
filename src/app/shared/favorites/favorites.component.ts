@@ -19,7 +19,7 @@ export class FavoritesComponent implements OnInit {
 
   getPokemonsFavorites(){
    this.favorites = this.PokemonService.getFavoritesPokemon()
-   console.log(this.favorites)
+
   }
 
 }

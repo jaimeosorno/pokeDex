@@ -26,7 +26,6 @@ export class DetailComponent implements OnInit{
       switchMap(({id}) => this.PokemonService.getPokemonById(id))
     ).subscribe(response => {
       this.pokemon = response
-      console.log(this.pokemon)
     })
 
     this.activateRoute.params
@@ -35,7 +34,6 @@ export class DetailComponent implements OnInit{
     )
     .subscribe(res => {
       this.detail = res
-      console.log(this.detail)
     })
 
   }
